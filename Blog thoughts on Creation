@@ -1,0 +1,137 @@
+
+# 🧠🎮 Mystery House Escape  
+*A Retro Text Adventure Built with Amazon Q Developer CLI*  
+**By Wrek | #BuildGamesChallenge | #AmazonQDevCLI**
+
+---
+
+## 🎯 Why I Built a Text Adventure
+
+For the [Build Games Challenge](https://aws.amazon.com/q/developer-cli/), I wanted something pure, nostalgic, and deceptively complex. So I chose to build a **text-based adventure game**—where code meets creativity, and every line of dialogue is a branch in the player’s fate.
+
+Text adventures don’t need graphics—they need imagination, structure, and good logic. And that made it the perfect sandbox to test how far I could go with **Amazon Q Developer CLI** as my AI pair programmer.
+
+---
+
+## 🤝 The Prompt That Started It All
+
+```plaintext
+I want to create a retro style text adventure game. Please help me create this project on GitHub and in VS Code. Make sure to extensively document the process and provide beginner-friendly instructions.
+````
+
+Amazon Q responded by:
+
+* Scaffolding the following project structure:
+
+  ```
+  /text-adventure/
+  ├── main.py
+  ├── game_engine.py
+  ├── game_data.py
+  ├── README.md
+  └── .gitignore
+  ```
+
+* Pre-filling all the files with:
+
+  * Game logic
+  * Room descriptions
+  * Command parser
+  * Inventory system
+  * Git instructions
+
+Honestly, it felt like coding with an invisible intern that read my mind (and my TODOs).
+
+---
+
+## 🧠 Prompt Engineering That Worked
+
+| Prompt Style         | Example Used                                            | Why It Worked                            |
+| -------------------- | ------------------------------------------------------- | ---------------------------------------- |
+| **Broad → Specific** | `Add inventory tracking with item pickup and use logic` | Q handled basic scaffolding then refined |
+| **Command-Oriented** | `Create a Player class with inventory methods`          | Clear commands = clean code output       |
+| **Context Stacking** | (Pasted previous function, then asked for update)       | Kept continuity and reduced rewrites     |
+
+---
+
+## 🤖 How Amazon Q Handled Classic Game Dev Problems
+
+### ✅ Room Navigation
+
+Q set up directional movement across 8 rooms with pre-linked exits. I only had to edit descriptions and tweak loops.
+
+### ✅ Command Parsing
+
+It auto-built a command processor to interpret inputs like:
+
+```
+> go east
+> take key
+> use key
+> look
+```
+
+### ✅ State & Inventory Management
+
+With a simple prompt, it gave me this class:
+
+```python
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.inventory = []
+
+    def add_item(self, item):
+        self.inventory.append(item)
+
+    def has_item(self, item):
+        return item in self.inventory
+```
+
+Didn’t change a line.
+
+---
+
+## ⚙️ Automation Wins
+
+Amazon Q saved hours of setup by:
+
+* Instantly generating all files with content
+* Writing and explaining git commands:
+
+  ```bash
+  git init
+  git add .
+  git commit -m "Initial commit: Basic text adventure game structure"
+  ```
+* Generating placeholder game data
+* Auto-documenting game commands and usage in `README.md`
+
+---
+
+## 💻 First Terminal Playthrough
+
+```
+============================================================
+                    RETRO TEXT ADVENTURE
+============================================================
+
+
+You wake up in a dimly lit room. Your head is pounding and you can't
+remember how you got here. The air is musty and cold. You need to
+find your way out and discover what happened to you...
+
+Type 'help' at any time to see available commands.
+
+
+============================================================
+```
+
+---
+
+## 🧠 Final Thoughts
+
+Letting Amazon Q take the reins on scaffolding meant I could skip the boring setup and dive right into world-building and story design. It felt like working with a fast-learning, logic-obsessed intern—one that doesn’t sleep and writes clean Python.
+
+
+```
